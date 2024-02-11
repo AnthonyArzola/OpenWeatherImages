@@ -12,13 +12,15 @@ public struct OpenWeatherImages {
     }
     
     public static func getImage(type: IconType) -> Image? {
-        return Image(type.rawValue, bundle: OpenWeatherImages.bundle)
+        let image = Image(type.rawValue, bundle: OpenWeatherImages.bundle)
+        return image
     }
     
     public static func getImage(name: String) -> Image? {
         guard let type = IconType(rawValue: name) else {
             return nil
         }
-        return OpenWeatherImages.getImage(type: type)
+        let image = OpenWeatherImages.getImage(type: type)
+        return image
     }
 }
