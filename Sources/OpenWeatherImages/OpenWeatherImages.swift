@@ -16,8 +16,7 @@ public struct OpenWeatherImages {
     }
     
     public static func getImage(name: String) -> Image? {
-        let formattedName = "_\(name.lowercased())"
-        guard let type = IconType(rawValue: formattedName) else {
+        guard let type = IconType(rawValue: name) else {
             return nil
         }
         return OpenWeatherImages.getImage(type: type)

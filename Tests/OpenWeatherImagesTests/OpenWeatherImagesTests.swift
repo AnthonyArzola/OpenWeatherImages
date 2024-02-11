@@ -10,9 +10,9 @@ final class OpenWeatherImagesTests: XCTestCase {
     
     func testUsingValidImageName() throws {
         // Test valid image name
-        let imageName = "01D"
+        let imageName = "01n"
         let image = OpenWeatherImages.getImage(name: imageName)
-        XCTAssertNil(image)
+        XCTAssertNotNil(image)
     }
     
     func testUsingInvalidImageName() throws {
